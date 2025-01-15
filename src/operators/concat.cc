@@ -12,7 +12,7 @@ ConcatObj::ConcatObj(GraphObj *graph, TensorVec inputs, Tensor output, int _dim)
 
 optional<vector<Shape>> ConcatObj::inferShape(const TensorVec &inputs) {
   Shape dims = inputs[0]->getDims();
-  auto rank = inputs[0]->getRank();
+  [[maybe_unused]] auto rank = inputs[0]->getRank();
 
   // =================================== 作业
   // ===================================
